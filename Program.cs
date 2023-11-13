@@ -61,6 +61,13 @@
                         task.Print();
                     }
                 }
+                else if(command == "new")
+                {
+                    Console.Write("Add new task: ");
+                    string addNewTask = Console.ReadLine();
+                    todolist.Add(new Todo(addNewTask));
+                    Console.WriteLine($"'{addNewTask}' added to todolist");
+                }
                 else
                 {
                     Console.WriteLine("Unknown command");
