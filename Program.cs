@@ -31,6 +31,12 @@
         static void Main(string[] args)
         {
             //  1. Create a REPL with 'quit':
+            string command;
+            do
+            {
+                Console.Write("> ");
+                command = Console.ReadLine();
+            } while (command != "quit");
             //  2. Create dummy todo items
             //  3. Add 'list' that lists all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
