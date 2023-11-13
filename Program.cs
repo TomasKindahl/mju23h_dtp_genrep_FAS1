@@ -35,7 +35,11 @@
             //  3. Add 'list' that lists all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
-            //  6. ... continue here ...
+            //  6. Add 'start' to start an existing todo item (from waiting to active)
+            //  7. Add 'stop' to stop an existing todo item (from active to waiting)
+            //  8. Add 'done' to mark a todo item as done (from active/waiting to done)
+            //  9. Add 'delete' to remove an item (from active/waiting to deleted)
+            // 10. Add 'help' to list all available commands
         }
     }
 }
