@@ -40,22 +40,32 @@
             {
                 Console.Write("> ");
                 command = Console.ReadLine();
-                if(command == "quit")
+                if (command == "quit")
                 {
                     break;
                 }
-                else if(command == "list")
+                else if (command == "list")
                 {
-                    Console.WriteLine("NYI");
+                    foreach (Todo task in todolist)
+                    {
+                        if (task.Status() == "waiting" || task.Status() == "active")
+                        {
+                            task.Print();
+                        }
+                    }
+                }
+                else if (command == "list all")
+                {
+                    foreach(Todo task in todolist)
+                    {
+                        task.Print();
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Unknown command");
                 }
             } while (command != "quit");
-            //  2. Create dummy todo items
-            //  3. Add 'list' that lists all active and waiting tasks
-            //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
             //  6. Add 'start' to start an existing todo item (from waiting to active)
             //  7. Add 'stop' to stop an existing todo item (from active to waiting)
