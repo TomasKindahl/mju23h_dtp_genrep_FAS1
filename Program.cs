@@ -30,12 +30,28 @@
         }
         static void Main(string[] args)
         {
-            //  1. Create a REPL with 'quit':
+            todolist = new List<Todo>();
+            todolist.Add(new Todo("Byt till vinterdäck"));
+            todolist.Add(new Todo("Plugga inför hemtentamen"));
+            todolist.Add(new Todo("Dra stockar från skogen"));
+
             string command;
             do
             {
                 Console.Write("> ");
                 command = Console.ReadLine();
+                if(command == "quit")
+                {
+                    break;
+                }
+                else if(command == "list")
+                {
+                    Console.WriteLine("NYI");
+                }
+                else
+                {
+                    Console.WriteLine("Unknown command");
+                }
             } while (command != "quit");
             //  2. Create dummy todo items
             //  3. Add 'list' that lists all active and waiting tasks
